@@ -34,7 +34,7 @@ function App() {
         <button onClick={handleSearch}>Search</button>
       </div>
       <div className="result-container">
-        <p style={{fontWeight:'bolder'}}>Defination</p>
+        <p style={{fontWeight:'bolder'}}>Definition: </p>
         {result && <p>{result}</p>}
       </div>
     </div>
