@@ -1,0 +1,147 @@
+@import url('https://db.onlinewebfonts.com/c/ca671f001f1c1ac07ba12ef439e7e65a?family=Simplon+Norm');
+
+.bannerName {
+    text-align: center;
+    font-family: 'Simplon Norm', sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 72px;
+    letter-spacing: 1px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.banner {
+    text-align: center;
+    margin: 0;
+    font-size: 22px;
+    font-family: 'Simplon Norm', sans-serif;
+    color: #333; /* Adjust as per your preference */
+    margin: 0 25rem 20px 25rem;
+}
+
+/* Content Layout */
+.content {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    position: relative;
+}
+
+/* Content Main Section */
+.content-main {
+    flex-grow: 1;
+}
+
+/* Product Grid Adjustments */
+.product-grid {
+    display: grid;
+    gap: 1.5rem;
+    transition: grid-template-columns 0.3s ease-in-out;
+}
+
+.product-grid.four-columns {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.product-grid.three-columns {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+   /* Add border around the whole header */
+    padding: 10px;
+}
+.content-header{
+    border-top: 1px solid #ccc; /* Add top border */
+    border-bottom: 1px solid #ccc; /* Add bottom border */
+    margin:0 10px 0px 10px
+}
+
+.item-count {
+    font-size: 18px;
+    margin-right: 20px; /* Adjust spacing if needed */
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.filter-toggle {
+    cursor: pointer;
+    font-size: 24px; /* Adjust size as needed */
+    margin-left: 10rem; /* Adjust spacing if needed */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.recommended-filter {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px;
+    
+}
+
+.recommended-filter h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.recommended-filter select {
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+/* Product Grid Adjustments */
+.product-grid {
+    display: grid;
+    gap: 1rem; /* Reduce this gap if needed */
+    justify-items: center; /* Ensure products are centered */
+    padding: 0 10px; /* Added padding to limit the left and right margin */
+    margin-top: 20px;
+}
+
+.product-grid.four-columns {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.product-grid.three-columns {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Adjust the grid items themselves */
+.product-grid .product-item {
+    margin-left: 5px; /* Adjust left margin */
+    margin-right: 5px; /* Adjust right margin */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .product-grid.three-columns,
+    .product-grid.four-columns {
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    }
+}
+
+@media (max-width: 900px) {
+    .product-grid.three-columns,
+    .product-grid.four-columns {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+    }
+}
+
+@media (max-width: 600px) {
+    .product-grid.three-columns,
+    .product-grid.four-columns {
+        grid-template-columns: 1fr; /* 1 item per row */
+    }
+}

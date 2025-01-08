@@ -1,0 +1,72 @@
+/* FilterBox Container */
+.filter-box {
+    position: relative; /* Changed to relative for better alignment */
+    width: 250px; /* Adjusted width */
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform: translateX(-100%);
+    opacity: 0;
+    display: none;
+    font-family: 'Simplon Norm', sans-serif;
+}
+
+/* Show Filter Box */
+.filter-box.open {
+    transform: translateX(0);
+    opacity: 1;
+    display: block;
+}
+
+/* Filter Section */
+.filter-section {
+    margin-top: 20px;
+}
+
+.filter-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Dropdown Styling */
+/* Dropdown Styling */
+.segment-dropdown {
+    margin-top: 20px;
+}
+
+.segment-dropdown select {
+    width: 100%; /* Ensure the dropdown spans full width */
+    padding: 10px;
+    font-size: 16px;
+    border: none; /* Remove all borders */
+    border-top: 2px solid #ccc; /* Add top border */
+    border-bottom: 2px solid #ccc; /* Add bottom border */
+    outline: none; /* Remove focus outline */
+    border-radius: 0; /* Ensure no rounded corners */
+    box-sizing: border-box; /* Include padding and border in the element's total width/height */
+}
+
+/* Optional: Add hover or focus effects */
+.segment-dropdown select:focus {
+    border-top: 2px solid #000000; /* Highlighted top border */
+    border-bottom: 2px solid #000000; /* Highlighted bottom border */
+}
+
+/* Optional: Adjust text alignment for better appearance */
+.segment-dropdown select option {
+    text-align: left;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .filter-box {
+        width: 100%; /* Adjust filter box width for smaller screens */
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1000; /* Ensure it stays above other content */
+    }
+}
